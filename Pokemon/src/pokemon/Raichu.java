@@ -19,13 +19,11 @@ public class Raichu extends Pokemones{
         especialAtack = "Impactrueno ";
     }
     
-    public int ataqueNormal()
-    {
+    public int ataqueNormal(){
         return 50;
     }
     
-    public int ataqueEspecial()
-    {
+    public int ataqueEspecial(){
         return 180;
     }
 }
