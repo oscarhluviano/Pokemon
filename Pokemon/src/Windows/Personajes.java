@@ -48,7 +48,7 @@ public class Personajes extends javax.swing.JFrame {
         icono = new ImageIcon(imagen.getImage().getScaledInstance(squirtle.getWidth(), squirtle.getHeight(), Image.SCALE_DEFAULT));
         squirtle.setIcon(icono);
         
-        imagen = new ImageIcon(getClass().getResource("/Imagenes/Mewtwo.jpg"));
+        imagen = new ImageIcon(getClass().getResource("/Imagenes/Mewtwo.png"));
         icono = new ImageIcon(imagen.getImage().getScaledInstance(mewtwo.getWidth(), mewtwo.getHeight(), Image.SCALE_DEFAULT));
         mewtwo.setIcon(icono);        
     }
@@ -141,12 +141,22 @@ public class Personajes extends javax.swing.JFrame {
                 bulbasaurMouseClicked(evt);
             }
         });
+        bulbasaur.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bulbasaurActionPerformed(evt);
+            }
+        });
         jPanel5.add(bulbasaur);
 
         charizard.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Charizard.png"))); // NOI18N
         charizard.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 charizardMouseClicked(evt);
+            }
+        });
+        charizard.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                charizardActionPerformed(evt);
             }
         });
         jPanel5.add(charizard);
@@ -162,12 +172,22 @@ public class Personajes extends javax.swing.JFrame {
                 squirtleMouseClicked(evt);
             }
         });
+        squirtle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                squirtleActionPerformed(evt);
+            }
+        });
         jPanel6.add(squirtle);
 
-        mewtwo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Mewtwo.jpg"))); // NOI18N
+        mewtwo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Mewtwo.png"))); // NOI18N
         mewtwo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 mewtwoMouseClicked(evt);
+            }
+        });
+        mewtwo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mewtwoActionPerformed(evt);
             }
         });
         jPanel6.add(mewtwo);
@@ -227,7 +247,16 @@ public class Personajes extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void raichuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_raichuActionPerformed
-        // TODO add your handling code here:
+        if (lblPersonajesContrincante.getText().equals(""))
+        {
+            home = new Raichu();
+            lblPersonajesContrincante.setText(home.nombre);
+        }
+        else
+        {
+            rival = new Raichu();
+            lblPersonajesNombre.setText(rival.nombre);
+        }
     }//GEN-LAST:event_raichuActionPerformed
 
     private void btnPersonajes7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPersonajes7ActionPerformed
@@ -239,86 +268,147 @@ public class Personajes extends javax.swing.JFrame {
     }//GEN-LAST:event_btnPelearActionPerformed
 
     private void pikachuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pikachuActionPerformed
-        
-    }//GEN-LAST:event_pikachuActionPerformed
-
-    private void pikachuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pikachuMouseClicked
-        if (evt.isMetaDown())
+        if (lblPersonajesContrincante.getText().equals(""))
         {
-            rival = new Pikachu();
-            lblPersonajesContrincante.setText(rival.nombre);
+            home = new Pikachu();
+            lblPersonajesContrincante.setText(home.nombre);
         }
         else
         {
+            rival = new Pikachu();
+            lblPersonajesNombre.setText(rival.nombre);
+        }
+    }//GEN-LAST:event_pikachuActionPerformed
+
+    private void pikachuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pikachuMouseClicked
+        if (evt.isMetaDown() && lblPersonajesContrincante.equals(""))
+        {
             home = new Pikachu();
-            lblPersonajesNombre.setText(home.nombre);
+            lblPersonajesContrincante.setText(home.nombre);
+        }
+        else
+        {
+            rival = new Pikachu();
+            lblPersonajesNombre.setText(rival.nombre);
         }
     }//GEN-LAST:event_pikachuMouseClicked
 
     private void charizardMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_charizardMouseClicked
-        if (evt.isMetaDown())
+        if (evt.isMetaDown() && lblPersonajesContrincante.equals(""))
         {
-            rival = new Charizard();
-            lblPersonajesContrincante.setText(rival.nombre);
+            home = new Charizard();
+            lblPersonajesContrincante.setText(home.nombre);
         }
         else
         {
-            home = new Charizard();
-            lblPersonajesNombre.setText(home.nombre);
+            rival = new Charizard();
+            lblPersonajesNombre.setText(rival.nombre);
         }
     }//GEN-LAST:event_charizardMouseClicked
 
     private void raichuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_raichuMouseClicked
-        if (evt.isMetaDown())
+        if (evt.isMetaDown() && lblPersonajesContrincante.equals(""))
         {
-            rival = new Raichu();
-            lblPersonajesContrincante.setText(rival.nombre);
+            home = new Raichu();
+            lblPersonajesContrincante.setText(home.nombre);
         }
         else
         {
-            home = new Raichu();
-            lblPersonajesNombre.setText(home.nombre);
+            rival = new Raichu(); 
+            lblPersonajesNombre.setText(rival.nombre);
         }
     }//GEN-LAST:event_raichuMouseClicked
 
     private void squirtleMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_squirtleMouseClicked
         if (evt.isMetaDown())
         {
-            rival = new Squirtle();
-            lblPersonajesContrincante.setText(rival.nombre);
+            home = new Squirtle();
+            lblPersonajesContrincante.setText(home.nombre);
         }
         else
         {
-            home = new Squirtle();
-            lblPersonajesNombre.setText(home.nombre);
+            rival = new Squirtle();
+            lblPersonajesNombre.setText(rival.nombre);
         }
     }//GEN-LAST:event_squirtleMouseClicked
 
     private void mewtwoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mewtwoMouseClicked
         if (evt.isMetaDown())
         {
-            rival = new Mewtwo();
-            lblPersonajesContrincante.setText(rival.nombre);
+            home = new Mewtwo();
+            lblPersonajesContrincante.setText(home.nombre);
         }
         else
         {
-            home = new Mewtwo();
-            lblPersonajesNombre.setText(home.nombre);
+            rival = new Mewtwo();
+            lblPersonajesNombre.setText(rival.nombre);
         }
     }//GEN-LAST:event_mewtwoMouseClicked
 
     private void bulbasaurMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bulbasaurMouseClicked
         if (evt.isMetaDown())
         {
-            rival = new Bulbasaur();
-            lblPersonajesContrincante.setText(rival.nombre);
+            home = new Bulbasaur();
+            lblPersonajesContrincante.setText(home.nombre);
         }
         else
         {
-            home = new Bulbasaur();
-            lblPersonajesNombre.setText(home.nombre);
+            rival = new Bulbasaur();
+            lblPersonajesNombre.setText(rival.nombre);
         }
     }//GEN-LAST:event_bulbasaurMouseClicked
+
+    private void squirtleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_squirtleActionPerformed
+        if (lblPersonajesContrincante.getText().equals(""))
+        {
+            home = new Squirtle();
+            lblPersonajesContrincante.setText(home.nombre);
+        }
+        else
+        {
+            rival = new Squirtle();
+            lblPersonajesNombre.setText(rival.nombre);
+        }
+    }//GEN-LAST:event_squirtleActionPerformed
+
+    private void charizardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_charizardActionPerformed
+        if (lblPersonajesContrincante.getText().equals(""))
+        {
+            home = new Charizard();
+            lblPersonajesContrincante.setText(home.nombre);
+        }
+        else
+        {
+            rival = new Charizard();
+            lblPersonajesNombre.setText(rival.nombre);
+        }
+    }//GEN-LAST:event_charizardActionPerformed
+
+    private void mewtwoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mewtwoActionPerformed
+        if (lblPersonajesContrincante.getText().equals(""))
+        {
+            home = new Mewtwo();
+            lblPersonajesContrincante.setText(home.nombre);
+        }
+        else
+        {
+            rival = new Mewtwo();
+            lblPersonajesNombre.setText(rival.nombre);
+        }
+    }//GEN-LAST:event_mewtwoActionPerformed
+
+    private void bulbasaurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bulbasaurActionPerformed
+        if (lblPersonajesContrincante.getText().equals(""))
+        {
+            home = new Bulbasaur();
+            lblPersonajesContrincante.setText(home.nombre);
+        }
+        else
+        {
+            rival = new Bulbasaur();
+            lblPersonajesNombre.setText(rival.nombre);
+        }
+    }//GEN-LAST:event_bulbasaurActionPerformed
 
     public static void ejecutar(Persona personaje2)
     {

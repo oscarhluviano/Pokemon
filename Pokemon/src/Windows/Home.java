@@ -1,3 +1,4 @@
+
 package Windows;
 
 import Principal.Persona;
@@ -91,7 +92,6 @@ public class Home extends javax.swing.JFrame {
         //JUEGO LOCAL, INICIALIZANDO TODO COMO DEFAULT
         cerrar();
         Perfil.ejecutar(1,new Persona());
-     
     }//GEN-LAST:event_btnLocalActionPerformed
 
     private void btnLogInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogInActionPerformed

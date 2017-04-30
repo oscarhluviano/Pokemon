@@ -38,7 +38,7 @@ public class Batalla extends javax.swing.JFrame {
         Icon icono; 
         
         //Imagenes
-        imagen = new ImageIcon(getClass().getResource("/Imagenes/CampoBatallaOscuro.png"));
+        imagen = new ImageIcon(getClass().getResource("/Imagenes/escenario.png"));
         icono = new ImageIcon(imagen.getImage().getScaledInstance(lblBatallaCampo.getWidth(), lblBatallaCampo.getHeight(), Image.SCALE_DEFAULT));
         lblBatallaCampo.setIcon(icono);
         
@@ -424,46 +424,45 @@ public class Batalla extends javax.swing.JFrame {
                         .addComponent(lblBatallaHome)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lblBatallaPokemonHome, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlBatallaInferiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlBatallaInferiorLayout.createSequentialGroup()
-                            .addGroup(pnlBatallaInferiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(pnlBatallaInferiorLayout.createSequentialGroup()
-                                    .addGap(9, 9, 9)
-                                    .addComponent(IniciarHome, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(35, 35, 35)
-                                    .addComponent(TerminarHome, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlBatallaInferiorLayout.createSequentialGroup()
-                                    .addGroup(pnlBatallaInferiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(lblCorazonHome, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(lblHPHome, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGap(20, 20, 20)
-                                    .addGroup(pnlBatallaInferiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(lblEnergiaHome, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(lblMpHome, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addGroup(pnlBatallaInferiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(lblHPotHome, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(lblHpPotionHome, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGap(13, 13, 13)
-                            .addGroup(pnlBatallaInferiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(lblMPotHome, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(lblMpPotionHome, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlBatallaInferiorLayout.createSequentialGroup()
-                            .addGap(12, 12, 12)
-                            .addComponent(normalHome)
-                            .addGap(18, 18, 18)
-                            .addComponent(especialHome)
-                            .addGap(18, 18, 18)
-                            .addComponent(usarHpHome)
-                            .addGap(18, 18, 18)
-                            .addComponent(usarMpHome))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlBatallaInferiorLayout.createSequentialGroup()
+                        .addGroup(pnlBatallaInferiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(pnlBatallaInferiorLayout.createSequentialGroup()
+                                .addGap(9, 9, 9)
+                                .addComponent(IniciarHome, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(35, 35, 35)
+                                .addComponent(TerminarHome, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlBatallaInferiorLayout.createSequentialGroup()
+                                .addGroup(pnlBatallaInferiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(lblCorazonHome, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblHPHome, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(20, 20, 20)
+                                .addGroup(pnlBatallaInferiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblEnergiaHome, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblMpHome, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(pnlBatallaInferiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblHPotHome, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblHpPotionHome, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(13, 13, 13)
+                        .addGroup(pnlBatallaInferiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblMPotHome, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblMpPotionHome, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlBatallaInferiorLayout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addComponent(normalHome)
+                        .addGap(18, 18, 18)
+                        .addComponent(especialHome)
+                        .addGap(18, 18, 18)
+                        .addComponent(usarHpHome)
+                        .addGap(18, 18, 18)
+                        .addComponent(usarMpHome)))
                 .addGap(26, 26, 26))
         );
 
         pnlBatalla.add(pnlBatallaInferior, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 990, 270));
 
         lblBatallaCampo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblBatallaCampo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/CampoBatallaOscuro.png"))); // NOI18N
+        lblBatallaCampo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/escenario.png"))); // NOI18N
         pnlBatalla.add(lblBatallaCampo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 990, 510));
 
         getContentPane().add(pnlBatalla, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 990, 510));
@@ -514,8 +513,8 @@ public class Batalla extends javax.swing.JFrame {
         }
         else
         {
-        lblMpPotionHome.setText(Integer.toString(pociones));
-        JOptionPane.showMessageDialog(null, "Ya no tienes pociones de energia!!");
+            lblMpPotionHome.setText(Integer.toString(pociones));
+            JOptionPane.showMessageDialog(null, "Ya no tienes pociones de energia!!");
         }
     }//GEN-LAST:event_usarMpHomeActionPerformed
 
@@ -543,7 +542,7 @@ public class Batalla extends javax.swing.JFrame {
         especialHome.setEnabled(false);
         ataqueActual.setText(home.nombre + " usó " + home.normalAtack);
         int vidaRival = Integer.parseInt(lblHPRival.getText());
-        if (vidaRival <= 0)
+        if (vidaRival <= home.ataqueNormal())
         {
             JOptionPane.showMessageDialog(null, home.nombre + " ha ganado la batalla!!");
             lblHPRival.setText("0");
@@ -563,7 +562,7 @@ public class Batalla extends javax.swing.JFrame {
         especialRival.setEnabled(false);
         ataqueActual.setText(rival.nombre + " usó " + rival.normalAtack);
         int vidaHome = Integer.parseInt(lblHPHome.getText());
-        if (vidaHome <= 0)
+        if (vidaHome <= rival.ataqueNormal())
         {
             JOptionPane.showMessageDialog(null, rival.nombre + " ha ganado la batalla!!");
             lblHPRival.setText("0");
@@ -583,7 +582,7 @@ public class Batalla extends javax.swing.JFrame {
         especialHome.setEnabled(false);
         ataqueActual.setText(home.nombre + " usó " + home.especialAtack);
         int vidaRival = Integer.parseInt(lblHPRival.getText());
-        if (vidaRival <= 0)
+        if (vidaRival <= home.ataqueEspecial())
         {
             JOptionPane.showMessageDialog(null, home.nombre + " ha ganado la batalla!!");
             lblHPRival.setText("0");
@@ -593,8 +592,8 @@ public class Batalla extends javax.swing.JFrame {
         }
         else
         {
-        vidaRival -= home.ataqueEspecial();
-        lblHPRival.setText(Integer.toString(vidaRival));
+            vidaRival -= home.ataqueEspecial();
+            lblHPRival.setText(Integer.toString(vidaRival));
         }
     }//GEN-LAST:event_especialHomeActionPerformed
 
@@ -603,7 +602,7 @@ public class Batalla extends javax.swing.JFrame {
         especialRival.setEnabled(false);
         ataqueActual.setText(rival.nombre + " usó " + rival.especialAtack);
         int vidaHome = Integer.parseInt(lblHPHome.getText());
-        if (vidaHome <= 0)
+        if (vidaHome <= rival.ataqueEspecial())
         {
             JOptionPane.showMessageDialog(null, rival.nombre + " ha ganado la batalla!!");
             lblHPRival.setText("0");
