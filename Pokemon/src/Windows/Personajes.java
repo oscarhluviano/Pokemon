@@ -264,6 +264,7 @@ public class Personajes extends javax.swing.JFrame {
     }//GEN-LAST:event_btnPersonajes7ActionPerformed
 
     private void btnPelearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPelearActionPerformed
+        cerrar();
         Batalla.ejecutar(personaje, home, rival);
     }//GEN-LAST:event_btnPelearActionPerformed
 
@@ -409,7 +410,12 @@ public class Personajes extends javax.swing.JFrame {
             lblPersonajesNombre.setText(rival.nombre);
         }
     }//GEN-LAST:event_bulbasaurActionPerformed
-
+    
+    private void cerrar()
+    {
+        this.dispose();
+    }
+    
     public static void ejecutar(Persona personaje2)
     {
         personaje = personaje2;

@@ -544,6 +544,7 @@ public class Batalla extends javax.swing.JFrame {
         int vidaRival = Integer.parseInt(lblHPRival.getText());
         if (vidaRival <= home.ataqueNormal())
         {
+            cerrar();
             JOptionPane.showMessageDialog(null, home.nombre + " ha ganado la batalla!!");
             lblHPRival.setText("0");
             personaje.batallasGanadas++;
@@ -564,6 +565,7 @@ public class Batalla extends javax.swing.JFrame {
         int vidaHome = Integer.parseInt(lblHPHome.getText());
         if (vidaHome <= rival.ataqueNormal())
         {
+            cerrar();
             JOptionPane.showMessageDialog(null, rival.nombre + " ha ganado la batalla!!");
             lblHPRival.setText("0");
             personaje.batallasPerdidas++;
@@ -584,6 +586,7 @@ public class Batalla extends javax.swing.JFrame {
         int vidaRival = Integer.parseInt(lblHPRival.getText());
         if (vidaRival <= home.ataqueEspecial())
         {
+            cerrar();
             JOptionPane.showMessageDialog(null, home.nombre + " ha ganado la batalla!!");
             lblHPRival.setText("0");
             personaje.batallasGanadas++;
@@ -604,6 +607,7 @@ public class Batalla extends javax.swing.JFrame {
         int vidaHome = Integer.parseInt(lblHPHome.getText());
         if (vidaHome <= rival.ataqueEspecial())
         {
+            cerrar();
             JOptionPane.showMessageDialog(null, rival.nombre + " ha ganado la batalla!!");
             lblHPRival.setText("0");
             personaje.batallasPerdidas++;
@@ -671,6 +675,11 @@ public class Batalla extends javax.swing.JFrame {
         especialHome.setEnabled(opcion);
         usarHpHome.setEnabled(opcion);
         usarMpHome.setEnabled(opcion);
+    }
+    
+    private void cerrar()
+    {
+        this.dispose();
     }
     
     public static void ejecutar(Persona personaje, Pokemon home, Pokemon rival)

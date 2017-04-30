@@ -86,6 +86,8 @@ public class Home extends javax.swing.JFrame {
 
     private void btnSignInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSignInActionPerformed
         //CREAR CUENTA CON BASE DE DATOS
+        cerrar();
+        Verifiacion.ejecutar();
     }//GEN-LAST:event_btnSignInActionPerformed
 
     private void btnLocalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLocalActionPerformed
@@ -107,6 +109,7 @@ public class Home extends javax.swing.JFrame {
     {
         this.dispose();
     }
+    
     public static void ejecutar()
     {
         Home home = new Home();

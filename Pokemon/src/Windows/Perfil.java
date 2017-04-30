@@ -186,10 +186,15 @@ public class Perfil extends javax.swing.JFrame
     }//GEN-LAST:event_btnSalirPerfilActionPerformed
 
     private void btnBatallaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBatallaActionPerformed
-        this.dispose();
+        cerrar();
         Personajes.ejecutar(personaje);
     }//GEN-LAST:event_btnBatallaActionPerformed
-
+    
+    private void cerrar()
+    {
+        this.dispose();
+    }
+    
     public static void ejecutar(int tipo, Persona personaje)
     {
         Perfil perfil;
