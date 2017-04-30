@@ -98,11 +98,8 @@ public class Home extends javax.swing.JFrame {
 
     private void btnLogInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogInActionPerformed
         //INICIAR SESION CON ABSE DE DATOS
-        /*
-        //Recabar datos desde sql
-        Persona personaje = new Persona(nickname, nivel, experiencia, batallasGanadas, batallasPerdidas);
-        Perfil.ejecutar(2, personaje);
-        */
+        cerrar();
+        LogIn.ejecutar();
     }//GEN-LAST:event_btnLogInActionPerformed
 
     private void cerrar()
